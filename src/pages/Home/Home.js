@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Sidebar from '../../Components/sidebar';
-import Navbar from '../../Components/Navbar';
-import Dashboard from '../../Components/Dashboard';
+import Sidebar from '../../components/sidebar';
+import Navbar from '../../components/Navbar';
+import Dashboard from '../../components/Dashboard';
 import 'boxicons/css/boxicons.min.css';
 import './Home.css';
 

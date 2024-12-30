@@ -5,7 +5,7 @@ import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { axiosPrivate } from './api/axios';
 import { token_verification_path } from './api/config';
-import { PrivateRoute } from "./Components/Common/PrivateRoute";
+import { PrivateRoute } from "./components/common/PrivateRoute";
 import Login from "./pages/Signin/SignIn";
 import Home from "./pages/Home/Home";
 import Error from "./pages/Error";
