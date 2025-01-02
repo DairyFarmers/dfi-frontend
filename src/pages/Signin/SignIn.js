@@ -5,11 +5,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { axiosPrivate } from "../../api/axios";
 import { login_path } from "../../api/config";
 import { login } from "../../redux/slices/userSlice";
+import OrgIntro from "../../components/shared/OrgIntro";
 
-const Login = () => {
+const SignIn = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+  const isEmailVerified = useSelector((state) => state.user.is_verified);
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -131,12 +133,7 @@ const Login = () => {
               </div>
             </div>
             <div className="col-6">
-              <div className="row upbox">
-                <span className="logotx"><img className="me-2" src="./images/logo.png" alt="" />DAIRY FARMER CO.</span>
-              </div>
-              <div className="row botbox">
-                <span className="bottx ">Revolutionizing poultry farming with our non-invasive pre-incubation gender determination system, utilizing machine learning for efficient and ethical chick sexing.</span>
-              </div>
+              <OrgIntro />
             </div>
           </div>
         </div>
@@ -145,4 +142,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;
