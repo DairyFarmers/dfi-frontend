@@ -19,7 +19,7 @@ import { useNotifications } from "@/hooks/useNotifications";
 export default function TopNavbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.user);
   const logoutLoading = useSelector((state) => state.user.loading);
   const [searchQuery, setSearchQuery] = useState("");
   
@@ -101,7 +101,7 @@ export default function TopNavbar() {
             <Button variant="ghost" className="flex items-center gap-3 h-auto p-2">
               <div className="hidden md:block text-right">
                 <div className="text-sm font-medium text-foreground">
-                  {user?.full_name || "User"}
+                  {user?.full_name || user}
                 </div>
                 {/*
                 <div className="text-xs text-muted-foreground flex items-center gap-1">

@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 import store from '@/redux/store';
 import AppRoutes from '@/routes';
 import { Toaster } from "sonner";
+import { ChatComponents } from './components/chat/ChatComponents';
 
 function App() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+
   return (
     <Provider store={store}>
       <AppRoutes />
+      <ChatComponents />
       <Toaster
         position="top-right"
         richColors
