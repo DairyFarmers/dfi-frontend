@@ -13,6 +13,7 @@ import {
   Menu,
   Milk,
   Truck,
+  Warehouse
 } from "lucide-react";
 import { navigationConfig } from "../../config/nav-config";
 import { PermissionGuard } from "@/components/common/PermissionGuard";
@@ -65,12 +66,14 @@ export default function Sidebar() {
         {/* Logo and brand */}
         <div className="flex items-center gap-3 p-6 border-b border-sidebar-border">
           <div className="flex items-center justify-center w-10 h-10 bg-sidebar-primary rounded-lg">
-            <Milk className="h-6 w-6 text-sidebar-primary-foreground" />
+            <div className="p-3 bg-primary rounded-xl">
+              <Warehouse className="h-6 w-6 text-primary-foreground" />
+            </div>
           </div>
           {(!collapsed || mobileOpen) && (
             <div>
-              <h1 className="text-lg font-bold text-sidebar-foreground">Dairy Manager</h1>
-              <p className="text-sm text-sidebar-foreground/60">Inventory Service</p>
+              <h1 className="text-lg font-bold text-sidebar-foreground">Dairy Farmers</h1>
+              <p className="text-sm text-sidebar-foreground/60">Inventory Solution</p>
             </div>
           )}
         </div>
